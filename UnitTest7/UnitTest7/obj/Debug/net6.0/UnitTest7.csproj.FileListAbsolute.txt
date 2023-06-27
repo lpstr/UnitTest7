@@ -1,0 +1,15 @@
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\bin\Debug\net6.0\UnitTest7.exe
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\bin\Debug\net6.0\UnitTest7.deps.json
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\bin\Debug\net6.0\UnitTest7.runtimeconfig.json
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\bin\Debug\net6.0\UnitTest7.dll
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\bin\Debug\net6.0\UnitTest7.pdb
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.csproj.AssemblyReference.cache
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.AssemblyInfoInputs.cache
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.AssemblyInfo.cs
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.csproj.CoreCompileInputs.cache
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.dll
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\refint\UnitTest7.dll
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.pdb
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\UnitTest7.genruntimeconfig.cache
+C:\Users\bbeky\source\repos\GPTUnitTest7\UnitTest7\UnitTest7\UnitTest7\obj\Debug\net6.0\ref\UnitTest7.dll
