@@ -1,6 +1,6 @@
 namespace UnitTestProject
 {
-    public class StudentConverterTests
+    public class StudentConverterTest
     {
         [Fact]
         public void Should_Set_HonorRoll_When_Student_Grade_Above_90_And_Age_Above_21()

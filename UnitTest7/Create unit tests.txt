@@ -1,0 +1,211 @@
+Cover provided conditional function with unit tests: 
+
+Create new chat with AI 
+
+Insert the following code to the project to be covered by tests 
+ 
+
+public class Student 
+
+{ 
+
+    public string Name { get; set; } 
+
+    public int Age { get; set; } 
+
+    public int Grade { get; set; } 
+
+    public bool Exceptional { get; set; } 
+
+    public bool HonorRoll { get; set; } 
+
+    public bool Passed { get; set; } 
+
+} 
+
+  
+
+public class StudentConverter 
+
+{ 
+
+    public List<Student> ConvertStudents(List<Student> students) 
+
+    { 
+
+        return students.Select(student => 
+
+        { 
+
+            var result = new Student 
+
+            { 
+
+                Name = student.Name, 
+
+                Age = student.Age, 
+
+                Grade = student.Grade 
+
+            }; 
+
+  
+
+            if (student.Grade > 90) 
+
+            { 
+
+                if (student.Age < 21) 
+
+                { 
+
+                    result.Exceptional = true; 
+
+                } 
+
+                else 
+
+                { 
+
+                    result.HonorRoll = true; 
+
+                } 
+
+            } 
+
+            else if (student.Grade > 70) 
+
+            { 
+
+                result.Passed = true; 
+
+            } 
+
+            else 
+
+            { 
+
+                result.Passed = false; 
+
+            } 
+
+  
+
+            return result; 
+
+        }).ToList(); 
+
+    } 
+
+} 
+
+ 
+
+Create unit tests that cover ConvertStudents function. Cover following test cases 
+
+Positive Test Cases: 
+
+Case 1: High Achiever 
+
+Given an array with a student object of age 21 or above and grade above 90, the function should return an object with the additional field HonorRoll = true. 
+
+Case 2: Exceptional Young High Achiever 
+
+Given an array with a student object of age less than 21 and grade above 90, the function should return an object with the additional field Exceptional = true. 
+
+Case 3: Passed Student 
+
+Given an array with a student object of grade between 71 and 90 (inclusive), the function should return an object with the additional field Passed = true. 
+
+Case 4: Failed Student 
+
+Given an array with a student object of grade 70 or less, the function should return an object with the additional field Passed = false. 
+
+Negative Test Cases: 
+
+Case 1: Empty Array 
+
+Given an empty array, the function should return an empty array. 
+
+Case 2: Not an Array  
+
+Given a null as an input the function should throw an error. 
+
+Code should be written for .net 6 and xUnit project
+
+
+Alright, I can provide you with unit tests for the function `ConvertStudents` using xUnit for .NET 6. Below you can find the respective test cases:
+
+```csharp
+using Xunit;
+using System.Collections.Generic;
+
+public class StudentConverterTests
+{
+    [Fact]
+    public void Should_Set_HonorRoll_When_Student_Grade_Above_90_And_Age_Above_21()
+    {
+        var students = new List<Student> { new Student { Name = "John", Age = 21, Grade = 95 } };
+        var converter = new StudentConverter();
+
+        var results = converter.ConvertStudents(students);
+
+        Assert.True(results[0].HonorRoll);
+    }
+
+    [Fact]
+    public void Should_Set_Exceptional_When_Student_Grade_Above_90_And_Age_Below_21()
+    {
+        var students = new List<Student> { new Student { Name = "John", Age = 20, Grade = 95 } };
+        var converter = new StudentConverter();
+
+        var results = converter.ConvertStudents(students);
+
+        Assert.True(results[0].Exceptional);
+    }
+
+    [Fact]
+    public void Should_Set_Passed_When_Student_Grade_Between_71_And_90()
+    {
+        var students = new List<Student> { new Student { Name = "John", Age = 20, Grade = 80 } };
+        var converter = new StudentConverter();
+
+        var results = converter.ConvertStudents(students);
+
+        Assert.True(results[0].Passed);
+    }
+
+    [Fact]
+    public void Should_Set_Passed_False_When_Student_Grade_Below_71()
+    {
+        var students = new List<Student> { new Student { Name = "John", Age = 20, Grade = 70 } };
+        var converter = new StudentConverter();
+
+        var results = converter.ConvertStudents(students);
+
+        Assert.False(results[0].Passed);
+    }
+
+    [Fact]
+    public void Should_Return_Empty_List_When_Given_Empty_List()
+    {
+        var students = new List<Student>();
+        var converter = new StudentConverter();
+
+        var results = converter.ConvertStudents(students);
+
+        Assert.Empty(results);
+    }
+
+    [Fact]
+    public void Should_Throw_ArgumentNullException_When_Given_Null()
+    {
+        List<Student> students = null;
+        var converter = new StudentConverter();
+
+        Assert.Throws<ArgumentNullException>(() => converter.ConvertStudents(students));
+    }
+}
+```
+
+These test cases cover all the provided cases. Note that the test case `Should_Throw_ArgumentNullException_When_Given_Null` expects that the `ConvertStudents` method throws an `ArgumentNullException` when the input is null. If this behavior is not currently implemented, you might want to add a null check at the start of the `ConvertStudents` method.
