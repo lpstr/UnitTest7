@@ -1808,6 +1808,16 @@
         "build": {
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "UnitTest7/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/UnitTest7.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnitTest7.dll": {}
+        }
       }
     }
   },
@@ -6103,11 +6113,17 @@
         "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "UnitTest7/1.0.0": {
+      "type": "project",
+      "path": "../UnitTest7/UnitTest7.csproj",
+      "msbuildProject": "../UnitTest7/UnitTest7.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.NET.Test.Sdk >= 17.3.2",
+      "UnitTest7 >= 1.0.0",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.2",
       "xunit.runner.visualstudio >= 2.4.5"
@@ -6139,7 +6155,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\bbeky\\source\\repos\\GPTUnitTest7\\UnitTest7\\UnitTest7\\UnitTest7\\UnitTest7.csproj": {
+              "projectPath": "C:\\Users\\bbeky\\source\\repos\\GPTUnitTest7\\UnitTest7\\UnitTest7\\UnitTest7\\UnitTest7.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
